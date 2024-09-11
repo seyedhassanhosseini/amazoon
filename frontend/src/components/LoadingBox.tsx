@@ -1,12 +1,9 @@
-import Alert from 'react-bootstrap/Alert'
+import Spinner from 'react-bootstrap/Spinner'
 
-export default function MessageBox({
-  variant = "info",
-  children
-} : {
-  variant?: string
-  children: React.ReactNode
-
-}) {
-  return <Alert variant={variant || 'info'}>{children}</Alert>
+export default function LoadingBox() {
+  return (
+    <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner>
+  )
 }
